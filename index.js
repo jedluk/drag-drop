@@ -1,7 +1,7 @@
 (function makeDragAndDrop() {
   let draggedElement = null;
 
-  Array.from(document.querySelectorAll('.table-head div')).forEach(header => {
+  Array.from(document.querySelectorAll('.table-head > div')).forEach(header => {
     header.addEventListener('dragstart', handleDragStart, false);
     header.addEventListener('drop', handleDrop, false);
     header.addEventListener('dragend', handleDragEnd, false);
@@ -55,8 +55,8 @@
 
   function getElements() {
     return {
-      headerNodes: Array.from(document.querySelectorAll('.table-head div')),
-      bodyNodes: Array.from(document.querySelectorAll('.table-body div'))
+      headerNodes: Array.from(document.querySelectorAll('.table-head > div')),
+      bodyNodes: Array.from(document.querySelectorAll('.table-body > div'))
     };
   }
 
